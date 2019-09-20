@@ -6,13 +6,12 @@ import createStore from './store';
 Vue.config.productionTip = false;
 
 export default function createApp() {
-  const router = createRouter()
-  const stroe = createStore()
+  const router = createRouter();
+  const store = createStore();
   const app = new Vue({
     router,
-    store,
+    // store,
     render: h => h(App),
-  }).$mount('#app');
-  return { app, stroe, router };
+  });
+  return { app, store, router };
 }
-
